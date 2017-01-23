@@ -14,7 +14,8 @@ require('laravel-elixir-vue-2');
  */
 
 elixir((mix) => {
-    mix.sass('app.scss')
-       .webpack('app.js')
-       .webpack('view/roadassist.js', './public/js/view/');
+    // mix.sass('app.scss')
+    //    .webpack('app.js')
+    mix.webpack('roadassist.js');
+    // mix.browserify('roadassist.js');
 });

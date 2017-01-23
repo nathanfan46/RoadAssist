@@ -13,5 +13,27 @@
 
 Route::get('/', function () {
     // return view('welcome');
+    // return view('roadassist');
+    return redirect('/roadassist');
+});
+
+Route::get('/roadassist', function () {
+    // return view('welcome');
+    // return view('roadassist');
+    return view('roadassist');
+});
+
+Route::get('/roadassist/request/{any}', function ($any) {
+    // return view('welcome');
+    return view('roadassist');
+});
+
+Route::get('/roadassist/tracking/{any}', function ($any) {
+    // return view('welcome');
+    return view('roadassist');
+});
+
+Route::get('/roadassist/{any}', function ($any) {
+    // return view('welcome');
     return view('roadassist');
 });

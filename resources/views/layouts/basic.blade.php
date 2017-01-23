@@ -17,10 +17,17 @@
     
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <script>
+	    window.Laravel = <?php echo json_encode([
+	        'csrfToken' => csrf_token(),
+	    ]); ?>
+	</script>
     
     <script src="{{ asset("Pratt/assets/js/jquery.min.js") }}"></script>
     <script src="{{ asset("Pratt/assets/js/smoothscroll.js") }}"></script>
-    
+
+
 
   </head>
 
@@ -52,28 +59,7 @@
 	<section id="home" name="home"></section>
 	<div id="headerwrap">
 	    <div class="container">
-	    	<div class="row centered">
-	    		<div class="col-lg-12">
-					<h1>Welcome To <b>Pratt</b></h1>
-					<h3>Show your product with this handsome theme.</h3>
-					<br>
-	    		</div>
-	    		
-	    		<div class="col-lg-2">
-	    			<h5>Amazing Results</h5>
-	    			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-	    			<img class="hidden-xs hidden-sm hidden-md" src="{{ asset("Pratt/assets/img/arrow1.png") }}">
-	    		</div>
-	    		<div class="col-lg-8">
-	    			<img class="img-responsive" src="{{ asset("Pratt/assets/img/app-bg.png") }}" alt="">
-	    		</div>
-	    		<div class="col-lg-2">
-	    			<br>
-	    			<img class="hidden-xs hidden-sm hidden-md" src="{{ asset("Pratt/assets/img/arrow2.png") }}">
-	    			<h5>Awesome Design</h5>
-	    			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-	    		</div>
-	    	</div>
+	    	@yield('content')
 	    </div> <!--/ .container -->
 	</div><!--/ #headerwrap -->
 
