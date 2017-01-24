@@ -146,7 +146,7 @@
 
                 this.location.message = this.location.latitude + "," + this.location.longitude; 
 
-                this.location.imgsrc = "http://maps.googleapis.com/maps/api/staticmap?center=" + this.location.latitude + "," + this.location.longitude + "&zoom=14&size=600x400&markers=color:red|label:A|" + this.location.latitude + "," + this.location.longitude + "&sensor=false";
+                this.location.imgsrc = "http://maps.googleapis.com/maps/api/staticmap?center=" + this.location.latitude + "," + this.location.longitude + "&zoom=14&size=600x400&markers=color:red|label:A|" + this.location.latitude + "," + this.location.longitude + "&sensor=false&key=AIzaSyDiUuDlNj73HAMVk4KB2tswmVlLlOSAEjs";
 
                 this.location.found = true;
             },
